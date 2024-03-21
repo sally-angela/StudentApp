@@ -36,7 +36,7 @@ class StudentDetailFragment : Fragment() {
         viewModel.studentLD.observe(viewLifecycleOwner, Observer {
             binding.txtID.setText(viewModel.studentLD.value?.id)
             binding.txtName.setText(viewModel.studentLD.value?.name)
-            binding.txtBod.setText(viewModel.studentLD.value?.dob)
+            binding.txtBod.setText(viewModel.studentLD.value?.bod)
             binding.txtPhone.setText(viewModel.studentLD.value?.phone)
 
             var url = viewModel.studentLD.value?.photoUrl
