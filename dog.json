@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "breed": "Labrador Retriever",
+        "size": "Large",
+        "colors": ["Black", "Yellow", "Chocolate"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": true,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=1"
+    },
+    {
+        "id": 2,
+        "breed": "German Shepherd",
+        "size": "Large",
+        "colors": ["Black and Tan", "Sable", "Black"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": true,
+            "loyal": false
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=2"
+    },
+    {
+        "id": 3,
+        "breed": "Golden Retriever",
+        "size": "Large",
+        "colors": ["Golden"],
+        "characteristics": {
+            "friendly": false,
+            "intelligent": true,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=3"
+    },
+    {
+        "id": 4,
+        "breed": "Bulldog",
+        "size": "Medium",
+        "colors": ["White", "Brindle", "Fawn"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": false,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=4"
+    },
+    {
+        "id": 5,
+        "breed": "Poodle",
+        "size": "Toy, Miniature, Standard",
+        "colors": ["Apricot", "White", "Black"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": false,
+            "loyal": false
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=5"
+    },
+    {
+        "id": 6,
+        "breed": "Beagle",
+        "size": "Small to Medium",
+        "colors": ["Tricolor", "Lemon & White", "Red & White"],
+        "characteristics": {
+            "friendly": false,
+            "intelligent": false,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=6"
+    },
+    {
+        "id": 7,
+        "breed": "Siberian Husky",
+        "size": "Medium to Large",
+        "colors": ["Black", "White", "Gray"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": true,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=7"
+    },
+    {
+        "id": 8,
+        "breed": "Dachshund",
+        "size": "Small",
+        "colors": ["Red", "Black & Tan", "Dapple"],
+        "characteristics": {
+            "friendly": false,
+            "intelligent": true,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=8"
+    },
+    {
+        "id": 9,
+        "breed": "Boxer",
+        "size": "Medium to Large",
+        "colors": ["Fawn", "Brindle", "White"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": false,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=9"
+    },
+    {
+        "id": 10,
+        "breed": "Shih Tzu",
+        "size": "Small",
+        "colors": ["White", "Black", "Gold"],
+        "characteristics": {
+            "friendly": true,
+            "intelligent": true,
+            "loyal": true
+        },
+        "images": "https://loremflickr.com/320/240/dog?lock=10"
+    }
+]
