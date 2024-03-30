@@ -4,7 +4,6 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
 }
 
-
 android {
     namespace = "com.sally.studentapp"
     compileSdk = 34
