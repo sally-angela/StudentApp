@@ -30,7 +30,6 @@ class DogListAdapter(val dogList:ArrayList<Dog>)
         holder.binding.txtIntelligent.text = "Intelligent: " + dogList[position].characteristics?.intelligent.toString()
         holder.binding.txtLoyal.text = "Loyal: " + dogList[position].characteristics?.loyal.toString()
 
-
         var url = dogList[position].images
         val builder = Picasso.Builder(holder.binding.root.context)
         builder.listener { picasso, uri, exception ->
