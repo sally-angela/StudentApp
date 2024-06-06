@@ -12,7 +12,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
 class StudentListAdapter(val studentList:ArrayList<Student>)
-    :RecyclerView.Adapter<StudentListAdapter.StudentViewHolder>() {
+    :RecyclerView.Adapter<StudentListAdapter.StudentViewHolder>(), ButtonDetailClickListener {
     class StudentViewHolder(var binding: StudentListItemBinding)
         :RecyclerView.ViewHolder(binding.root)
 
@@ -26,32 +26,40 @@ class StudentListAdapter(val studentList:ArrayList<Student>)
     }
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
-        holder.binding.txtID.text = studentList[position].id
-        holder.binding.txtName.text = studentList[position].name
-        holder.binding.btnDetail.setOnClickListener {
-            val action = StudentListFragmentDirections.actionStudentDetailFragment(studentList[position].id.toString())
-            Navigation.findNavController(it).navigate(action)
-        }
+        holder.binding.student = studentList[position]
+        holder.binding.listener = this
 
-        var url = studentList[position].photoUrl
-        val builder = Picasso.Builder(holder.itemView.context)
-        builder.listener { picasso, uri, exception ->
-            exception.printStackTrace() }
-        builder.build().load(url).into(holder.binding.imageView, object:Callback {
-            override fun onSuccess() {
-                holder.binding.progressBar.visibility = View.INVISIBLE
-                holder.binding.imageView.visibility = View.VISIBLE
-            }
-
-            override fun onError(e: Exception?) {
-                Log.e("picasso_error", e.toString())
-            }
-        })
+//        holder.binding.txtID.text = studentList[position].id
+//        holder.binding.txtName.text = studentList[position].name
+//        holder.binding.btnDetail.setOnClickListener {
+//            val action = StudentListFragmentDirections.actionStudentDetailFragment(studentList[position].id.toString())
+//            Navigation.findNavController(it).navigate(action)
+//        }
+//
+//        var url = studentList[position].photoUrl
+//        val builder = Picasso.Builder(holder.itemView.context)
+//        builder.listener { picasso, uri, exception ->
+//            exception.printStackTrace() }
+//        builder.build().load(url).into(holder.binding.imageView, object:Callback {
+//            override fun onSuccess() {
+//                holder.binding.progressBar.visibility = View.INVISIBLE
+//                holder.binding.imageView.visibility = View.VISIBLE
+//            }
+//
+//            override fun onError(e: Exception?) {
+//                Log.e("picasso_error", e.toString())
+//            }
+//        })
     }
 
     fun updateStudentList(newStudentList:ArrayList<Student>) {
         studentList.clear()
         studentList.addAll(newStudentList)
         notifyDataSetChanged()
+    }
+
+    override fun onButtonDetailClick(v: View) {
+        val action = StudentListFragmentDirections.actionStudentDetailFragment(v.tag.toString())
+        Navigation.findNavController(v).navigate(action)
     }
 }
